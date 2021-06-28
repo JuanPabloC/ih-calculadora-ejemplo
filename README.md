@@ -10,3 +10,8 @@ En esta aplicacion, vamos a desarrollar una calculadora
   - Un archivo CSS
   - Un archivo JS
 - incluir un favicon
+
+## Deployment
+
+- El despliege se realizo en Netlify
+- Se puede acceder al proyecto en: https://sharp-mahavira-27ff1c.netlify.app/
