@@ -1,3 +1,5 @@
+import operaciones from "./operaciones.js";
+
 // 1. VARIABLES
 const nombre = document.getElementById("capturar-nombre");
 const btnSaludar = document.getElementById("btn-saludar");
@@ -13,30 +15,16 @@ const valorD = document.getElementById("valor-d");
 const btnRestar = document.getElementById("btn-restar");
 const areaRestar = document.getElementById("area-restar");
 
-// 2. FUNCIONES
-const saludar = (name) => {
-  const saludo = `Hola ${name}!!!`;
-  return (areaSaludo.innerHTML = saludo);
-};
-const sumar = (a, b) => {
-  return a + b;
-};
-
-const restar = (a, b) => {
-  return a - b;
-};
-
 // 3. EVENTOS
 btnSaludar.addEventListener("click", () => {
-  const nameValue = nombre.value;
-  return saludar(nameValue);
+  areaSaludo.innerHTML = operaciones.saludar(nombre.value);
 });
 
 btnSumar.addEventListener("click", () => {
   const inputValorA = parseInt(valorA.value);
   const inputValorB = parseInt(valorB.value);
 
-  const resultado = sumar(inputValorA, inputValorB);
+  const resultado = operaciones.sumar(inputValorA, inputValorB);
 
   areaSuma.innerHTML = resultado;
 });
@@ -45,7 +33,7 @@ btnRestar.addEventListener("click", () => {
   const inputValorC = parseInt(valorC.value);
   const inputValorD = parseInt(valorD.value);
 
-  const resultado = restar(inputValorC, inputValorD);
+  const resultado = operaciones.restar(inputValorC, inputValorD);
 
   areaRestar.innerHTML = resultado;
 });
